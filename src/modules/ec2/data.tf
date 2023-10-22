@@ -13,15 +13,15 @@ data "aws_ami" "ubuntu" {
 }
 
 data "subnet_id" "public_subnet" {
-    filter {
-        name    = Name
-        values = ["intuitivePublicSubnet1"]
-    }
+  filter {
+    name   = Name
+    values = ["intuitivePublicSubnet1"]
+  }
 }
 
 data "security_groups" "public_sg" {
-    filter{
-        name    = name
-        values = ["allow_all"]
-    } 
+  filter {
+    name   = name
+    values = ["allow_all"]
+  }
 }

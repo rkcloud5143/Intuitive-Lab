@@ -190,11 +190,11 @@ resource "aws_security_group" "allow_tls" {
   vpc_id      = aws_vpc.intuitiveVPC.id
 
   ingress {
-    description      = "TLS from VPC"
-    from_port        = 0
-    to_port          = 0
-    protocol         = "-1"
-    cidr_blocks      = [aws_vpc.intuitiveVPC.cidr_block, "0.0.0.0/0"]
+    description = "TLS from VPC"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = [aws_vpc.intuitiveVPC.cidr_block, "0.0.0.0/0"]
   }
 
   egress {

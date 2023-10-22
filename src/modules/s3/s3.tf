@@ -3,8 +3,8 @@ resource "aws_s3_bucket" "intuitive" {
   bucket        = var.bucket_name
   force_destroy = true
   tags = {
-        owner = "intuitive-cloud"
-    }
+    owner = "intuitive-cloud"
+  }
 }
 
 resource "aws_s3_bucket_versioning" "terraform_bucket_versioning" {
